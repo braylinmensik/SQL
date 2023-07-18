@@ -1,0 +1,35 @@
+-- Create a grocery store database 
+
+CREATE TABLE groceries (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, section TEXT, rating INTEGER);
+
+INSERT INTO groceries VALUES (1, "bananas", 5, 3.99, "produce", 8);
+INSERT INTO groceries VALUES (2, "bread", 1, 4.50, "bakery", 4);
+INSERT INTO groceries VALUES (3, "salsa", 2, 6.00, "fresh", 9);
+INSERT INTO groceries VALUES (4, "apples", 10, 8.50, "produce", 7);
+INSERT INTO groceries VALUES (5, "pretzels", 1, 3.99, "snacks", 7);
+INSERT INTO groceries VALUES (6, "toothpaste", 2, 2.99, "hygiene", 8);
+INSERT INTO groceries VALUES (7, "steak", 4, 14.99, "meat", 10);
+INSERT INTO groceries VALUES (8, "chicken breast", 5, 9.50, "meat", 9);
+INSERT INTO groceries VALUES (9, "hummus", 2, 4.95, "fresh", 7);
+INSERT INTO groceries VALUES (10, "cookies", 10, 5.95, "bakery", 9);
+INSERT INTO groceries VALUES (11, "lemons", 5, 5.99, "produce", 4);
+INSERT INTO groceries VALUES (12, "ice cream", 2, 3.99, "frozen", 8);
+INSERT INTO groceries VALUES (13, "lettuce", 2, 5.99, "produce", 5);
+INSERT INTO groceries VALUES (14, "peanuts", 3, 8.99, "snacks", 5);
+INSERT INTO groceries VALUES (15, "peaches", 5, 6.99, "produce", 8);
+
+
+--Display the database ordered by price:
+SELECT * FROM groceries
+ORDER BY price desc;
+
+--What are the 5 highest rated items?
+SELECT item, price, rating
+FROM groceries
+ORDER BY rating desc
+LIMIT 5;
+
+--What is the average price of the items in the produce section?
+SELECT AVG(price) "Average price for produce items"
+FROM groceries
+where section = 'produce';
