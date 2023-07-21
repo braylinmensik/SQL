@@ -1,0 +1,34 @@
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, size TEXT, price INTEGER, section INTEGER, sale INTEGER);
+
+INSERT INTO clothing_store VALUES (1, "Pink Crop Tank","Small", 8.99, 2, "No");
+INSERT INTO clothing_store VALUES (2, "Ripped Denim Jeans","Medium", 34.99, 3, "No");
+INSERT INTO clothing_store VALUES (3, "High Waisted Black Shorts","Small", 24.99, 4, "Yes");
+INSERT INTO clothing_store VALUES(4, "Blue Crop Tank","Medium", 8.99, 2, "No");
+INSERT INTO clothing_store VALUES (5, "White Cropped Graphic Tee","Large", 18.99, 1, "No");
+INSERT INTO clothing_store VALUES (6, "Long Sleeve Chicago Tee","Small", 12.99, 1, "No");
+INSERT INTO clothing_store VALUES (7, "No-Show Black Socks","Large", 10.99, 5, "Yes");
+INSERT INTO clothing_store VALUES (8, "Denim Oversized Mom Jeans","Large", 44.99, 3, "No");
+INSERT INTO clothing_store VALUES (9, "Black Leggings","Small", 22.99, 4, "Yes");
+INSERT INTO clothing_store VALUES (10, "White Nike Socks","Medium", 22.99, 5, "No");
+INSERT INTO clothing_store VALUES (11, "Pink Flower Blouse","Large", 30.55, 2, "No");
+INSERT INTO clothing_store VALUES (12, "Low Waisted Denim Shorts","Large", 24.99, 4, "No");
+INSERT INTO clothing_store VALUES (13, "Oversized Bears Hoodie","Large", 35.00, 1, "Yes");
+INSERT INTO clothing_store VALUES (14, "Blue Cropped Leggings","Large", 22.99, 4, "Yes");
+INSERT INTO clothing_store VALUES (15, "Tie Dye Tank","Medium", 23.99, 2, "No");
+
+SELECT * FROM clothing_store;
+
+--Present every item in the store in order by least expensive to most expensive. 
+SELECT * FROM clothing_store ORDER BY price;
+
+--How many items were sold by The Clothing Depot?
+SELECT count(id) FROM clothing_store;
+
+--What is the total revenue from The Clothing Depot? 
+SELECT sum(price) FROM clothing_store;
+
+--Present every item sold along with which section they were sold in.
+SELECT item, section FROM clothing_store ORDER BY section;
+
+--What is the name and the price of the most expensive item sold?
+SELECT max(price) FROM clothing_store;
