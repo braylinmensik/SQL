@@ -1,0 +1,46 @@
+#In this SQL, I am querying data from my college soccer team to quantify the statistics of each player! 
+
+CREATE TABLE Loras_Soccer (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    minutes INTEGER,
+    posession REAL)
+    ;
+    
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Abby Erikson", 90, 0.3602);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Caitlin Scopa", 45, 0.3489);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Denver Fessler", 60, 0.5906);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Jenny Wick", 25, 0.1854);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Kiki Cabrerra", 38, 0.4013);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Taylor Trovato", 90, 0.5045);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Braylin Mensik", 75, 0.7654);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Ryliegh O'Brien", 59, 0.6913);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Emily Perhats", 60, 0.5045);
+INSERT INTO Loras_Soccer (name, minutes, posession)
+    VALUES ("Jane Hanson", 0, 0.0);
+
+
+#1. 
+SELECT name, minutes, ROUND (posession * 100) AS posession_percentage FROM Loras_Soccer;
+
+
+SELECT COUNT(*), 
+CASE 
+    WHEN minutes >= 90 THEN 'Full Game'
+    WHEN minutes >= 45 THEN 'Half Game'
+    WHEN minutes > 70 THEN 'Less than half'
+    ELSE 'No playing time'
+END as "Playing_time" 
+FROM Loras_Soccer
+GROUP BY "Playing time";
+
+
