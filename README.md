@@ -1,2 +1,3 @@
-# Braylin's Awesome SQL Portfolio 
-Hello there, and welcome to my SQL Portfolio! In this portfolio, you will find code respitory which contains SQL I have written. Please take a look through my files and reach out to me with any questions, concerns, or feedback. I look forward to connecting with you! :) 
+# Braylin's SQL Portfolio 
+
+Hello and welcome to my SQL Portfolio! Within this repository, you will discover a collection of SQL code that I have authored. I invite you to review the contents and reach out to me should you have any inquiries, feedback, or comments. Kindly note that this portfolio is a work in progress, as I am currently pursuing the completion of my data analytics certificate. As a result, it may not be entirely finalized. I eagerly anticipate the opportunity to engage with you in the near future. 
